@@ -38,7 +38,16 @@
             }
         }
 
-        
+        public function reservar($carro, $data_inicio, $data_fim, $pessoa){
+            $sql = "INSERT INTO tb_reservas (id_carro, data_inicio, data_fim, pessoa) 
+                    VALUES (:id_carro, :data_inicio, :data_fim, :pessoa)";
+            $sql = $this->pdo->prepare($sql);
+            $sql->bindValue(":id_carro", $carro);
+            $sql->bindValue(":data_inicio", $data_inicio);
+            $sql->bindValue(":data_fim", $data_fim);
+            $sql->bindValue(":pessoa", $pessoa);
+            $sql->execute();
+        }
 
     }
 
