@@ -2,7 +2,7 @@
     require 'config.php';
     require 'classes/reservas.class.php';
 
-    $reserva = new Reservas($pdo);
+    $reservas = new Reservas($pdo);
 
 ?>
 <h1>Reservas</h1>

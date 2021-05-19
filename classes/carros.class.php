@@ -7,7 +7,15 @@
         }
         
         public function getCarros(){
+            $array = array();
+
+            $sql = "SELECT * FROM tb_carros";
+            $sql = $this->pdo->query($sql);
             
+            if($sql->rowCount() > 0){
+                $array = $sql->fetchAll();
+            }
+            return $array;
         }
 
 
