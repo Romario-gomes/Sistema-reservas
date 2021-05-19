@@ -17,6 +17,8 @@
 
         if($reservas->verificarDisponibilidade($carro, $data_inicio, $data_fim)){
             $reservas->reservar($carro, $data_inicio, $data_fim, $pessoa);
+            header("Location: index.php");
+            exit;
         }else{
             echo "Este carro já está reservado neste período";
         }
