@@ -18,4 +18,7 @@
         echo $item['pessoa'].' reservou o carro '. $item['id_carro'].' entre '.$data1.' e '.$data2.'<br>';
     }
 ?>
-   
+<hr>
+<?php 
+    require 'calendario.php';
+?>
